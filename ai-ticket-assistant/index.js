@@ -24,7 +24,8 @@ app.use(
   serve({
     client: inngest,
     functions: [onUserSignup, onTicketCreated],
-  })
+    signingKey: process.env.INNGEST_SIGNING_KEY,
+  }),
 );
 
 mongoose
